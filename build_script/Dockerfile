@@ -14,6 +14,10 @@ RUN mvn clean package
 
 FROM base AS run
 
+LABEL org.opencontainers.image.authors="GUOHAI.ORG"
+LABEL org.opencontainers.image.source=https://github.com/guohai163/jacoku-testee
+
+
 WORKDIR /opt/jacoku-testee
 COPY --from=builder /opt/jacoku-testee/target/*.jar /opt/jacoku-testee/jacoku-testee.jar
 
