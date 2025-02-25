@@ -8,7 +8,7 @@ FROM maven:3.8.6-openjdk-11 AS builder
 
 WORKDIR /opt/jacoku-testee
 COPY pom.xml .
-COPY src .
+COPY src src
 
 RUN mvn clean package
 
